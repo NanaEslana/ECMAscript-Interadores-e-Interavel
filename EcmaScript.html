@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMAscript.6</title>
+</head>
+<body>
+    <script>
+        //next() percorre todos objetos da array.
+        //Quando ele percorre todos os itens de uma array devolver value:undefined done:true
+
+    let bruxos = ['Harry Potter','Hermione Granger','Rony Weasley'];
+    let interadorBruxos = bruxos[Symbol.iterator]();
+        console.log(interadorBruxos.next());
+        console.log(interadorBruxos.next());
+        console.log(interadorBruxos.next());
+        console.log(interadorBruxos.next());//Quando chegar aqui,depois de percorre todos,voltar undefined
+
+
+        let chapeuSelector = function(bruxos){
+            let casas = ['Grifinoria','Sonserina','Corvinal','Lufa-Lufa']
+            let casa = casas[Math.floor(Math.random() * casas.length)];//Faz um sorteio das casas!
+            console.log('Bruxos:' + bruxos + '| Casa: '+ casa );//Mostrar os nomes dos bruxos com as casas sorteadas
+        }   
+
+        let bruxos = ['Harry Potter','Hermione Granger','Rony Weasley']
+        let interador =bruxos[Symbol.iterator]();
+        let done = false;
+        let proximo = interador.next();
+        do{
+            let bruxos = proximo.value;
+            chapeuSelector(bruxos);
+            proximo = interador.next();
+        }while(!proximo.done); //Retorna do interador para controla o Do While e interar
+
+
+
+    </script>
+</body>
+</html>
