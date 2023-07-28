@@ -33,9 +33,38 @@
             chapeuSelector(bruxos);
             proximo = interador.next();
         }while(!proximo.done); //Retorna do interador para controla o Do While e interar
+    </script>
+
+    <script>
+        /* for(Vareavel of iterador){
+                    corpo.
+            }
+        */
+        //Não ultilizamos em objetos que não seja iteravel
+        let numeros = [1,2,3,4,5];
+        for (let numero of numeros){ //usado para percorre toda a array
+             console.log(numero);
+        }
+
+        //exemplo de objetos não iteravel,se usar o for of dar erro,por que ele não e iteravel
+        let carro = {
+             modelo: 'Fiat',
+             ano: '1995'
+        }
+        for (let carros in carro){ //ultilizamos quando ele não é iteravel
+         console.log(carros);
+        }
 
 
+        let carro = {
+             modelo: 'Fiat',
+            ano: '1995'
+        }
 
+        for (let carros in carro){ //In pegar o nome de cada uma das propriedadesque esta dentro do objeto.
+            let inf = carro[carros];//Pegar os valores das propriedades
+                console.log(inf); //Vai mostrar Fiat e 1995
+        }
     </script>
 </body>
 </html>
