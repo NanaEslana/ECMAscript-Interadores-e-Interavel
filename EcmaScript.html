@@ -66,5 +66,23 @@
                 console.log(inf); //Vai mostrar Fiat e 1995
         }
     </script>
+            
+    <script>
+        //Brack e continue tambem funciona como for of
+
+        let numeros = [1,2,3,4,5];
+            for(let numero of numeros){
+                if(numero > 3) break;
+                console.log(numero);
+            }
+
+        //Continuo usar para indicar que o laço dever ser continuado passando imediatamente parao proximo item
+
+
+        for(let numero of numeros){
+             if(numero === 2) continue; //Quando o numero for 2, sempre ignorar,e voltar o valor da  sequencia.
+            console.log(numero);
+        }
+    </script>
 </body>
 </html>
